@@ -1,4 +1,4 @@
-package day5;
+package day3;
 
 import java.awt.KeyEventDispatcher;
 import java.awt.KeyboardFocusManager;
@@ -16,7 +16,7 @@ import org.teachingextensions.logo.Tortoise;
  * http://school.wintrisstech.org/jars/TeachingKidsProgramming.jar
  **/
 
-public class TurtleTreasureHunt implements KeyEventDispatcher {
+public class turtleTreasureHunt implements KeyEventDispatcher {
 
 	int tortoiseSpeed = 5;
 
@@ -55,26 +55,11 @@ public class TurtleTreasureHunt implements KeyEventDispatcher {
 		System.out.println(tortoiseLocationY);
 		// 6. If tortoise is at same location as the little girl,
 		// make a pop-up tell the Tortoise where to go next
-		 if(tortoiseLocationX  == 140 && tortoiseLocationY == 290){
-			 JOptionPane.showMessageDialog(null, "Go to the Pirate Robot");
-		 }
-		 if(tortoiseLocationX  == 410 && tortoiseLocationY == 280){
-			 JOptionPane.showMessageDialog(null, "Go to the skull ");
-		 }
-		 if(tortoiseLocationX  == 180 && tortoiseLocationY == 90){
-			 JOptionPane.showMessageDialog(null, "Go to the parrots");
-		 }
-		 if(tortoiseLocationX  == 440 && tortoiseLocationY == 100){
-			 JOptionPane.showMessageDialog(null, "Go to the little girl");
-		 }
-		 if(tortoiseLocationX  == 500 && tortoiseLocationY == 320){
-			 JOptionPane.showMessageDialog(null, "Go to the fish");
-		 }
-		 }
+		
 		// 7. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
 
-	
+	}
 
 	private void go() {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
@@ -88,7 +73,7 @@ public class TurtleTreasureHunt implements KeyEventDispatcher {
 		Tortoise.getBackgroundWindow().addPaintable(backgroundImage);
 		Tortoise.penUp();
 		JOptionPane.showMessageDialog(null,
-				"Ask the boy for help with your quest. Press the space bar to ask.");
+				"Ask the little girl for help with your quest. Press the space bar to ask.");
 	}
 
 	public boolean dispatchKeyEvent(KeyEvent e) {
@@ -108,6 +93,6 @@ public class TurtleTreasureHunt implements KeyEventDispatcher {
 	}
 
 	public static void main(String[] args) throws MalformedURLException {
-		new TurtleTreasureHunt().go();
+		new turtleTreasureHunt().go();
 	}
 }
